@@ -1,0 +1,114 @@
+@font-face{
+    font-family:'Technology';
+    src:url(/font.proj/Technology.ttf);
+    font-style: normal;
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #fafafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    background-color: #333;
+    padding: 40px 30px 30px;
+    padding-right: 20px;
+    border-radius:20px ;
+    min-height: 400px;
+    min-width: 300px;
+    box-shadow: 25px 25px 75px rgba(0,0,0,0.25),
+    10px 20px 70px rgba(0,0,0,0.25),
+    inset -5px -5px 15px rgba(0,0,0,0.25),
+    inset 5px 5px 15px rgba(0,0,0,0.25);
+}
+.calculater{
+    display: grid;
+    gap: 10px;
+    position: relative;
+}
+.calculater #values{
+    grid-column: span 4;
+    height: 100px;
+    width: calc(100%-50px);
+    margin-bottom: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    background-color: #a7af7c;
+    border: none;
+    outline: none;
+    font-size: 35px;
+    padding: 10px;
+    text-align: right;
+    font-family:'Technology';
+}
+
+.calculater button{
+    border: none;
+    margin-right: 10px;
+
+    height: 80px;
+    width: 80px;
+    background:linear-gradient(180deg, #2f2f2f,#3f3f3f);
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: inset -8px 0 8px rgba(0,0,0,0.15),inset 0 -8px 8px rgba(0,0,0,0.25),0 0 0 2px rgba(0, 0,0, 0.75),10px 20px 25px rgba(0,0,0,0.4);
+    position: relative;
+}
+
+.calculater button::before{
+    content: '';
+    position: absolute;
+    top: 3px;
+    bottom: 14px;
+    right: 12px;
+    left: 4px;
+    border-radius: 10px;
+    background: linear-gradient(90deg,#2d2d2d,#4d4d4d);
+    border-left: 1px solid rgba(0, 0,0,0.27);
+    border-bottom: 1px solid rgba(0, 0,0,0.27);
+    border-top: 1px solid rgba(0, 0,0,0.27);
+}
+
+.calculater button i{
+    position: relative;
+    text-transform: uppercase;
+    font-style: normal;
+    font-size: 1.5rem;
+}
+
+.calculater button:active{
+
+    filter: brightness(2);
+}
+
+.calculater button.clear{
+    background: #F00;
+}
+.calculater button.clear::before{
+    background: linear-gradient(90deg,#d20000,rgba(255,255,255,0.35));
+    border-left: 1px solid rgba(255,255,255,0.27);
+    border-bottom: 1px solid rgba(255,255,255,0.27);
+    border-top: 1px solid rgba(255,255,255,0.27);   
+}
+
+.calculater button.plus{
+    grid-row: span 2;
+    height: 180px;
+    background: #2196f3;
+}
+.calculater button.plus::before{
+    background: linear-gradient(90deg,#2196f3,rgba(255,255,255,0.35));
+    border-left: 1px solid rgba(255,255,255,0.27);
+    border-bottom: 1px solid rgba(255,255,255,0.27);
+    border-top: 1px solid rgba(255,255,255,0.27);   
+}
